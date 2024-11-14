@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rh-summit-warsaw
+  title: rh-summit-warsaw
+  annotations:
+    janus-idp.io/tekton: rh-summit-warsaw
+    tektonci/build-namespace: demo
+    github.com/project-slug: piomin/rh-summit-warsaw
+    sonarqube.org/project-key: piomin_rh-summit-warsaw
+    backstage.io/kubernetes-id: rh-summit-warsaw
+    backstage.io/techdocs-ref: dir:.
+    argocd/app-name: rh-summit-warsaw
+    prometheus.io/rule: container_memory_usage_bytes{pod=~"rh-summit-warsaw-.*"}|pod,rate(container_cpu_usage_seconds_total{pod=~"rh-summit-warsaw-.*"}[5m])|pod
+  tags:
+    - spring-boot
+    - java
+    - maven
+    - tekton
+    - argocd
+    - renovate
+    - sonarqube
+spec:
+  type: service
+  owner: piomin
+  lifecycle: experimental

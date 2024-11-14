@@ -1,0 +1,11 @@
+site_name: rh-summit-warsaw
+site_description: 
+repo_url: https://github.com/piomin/rh-summit-warsaw
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+# Note for content editors, edit only the section below
+nav:
+  - rh-summit-warsaw Documentation: index.md
